@@ -10,41 +10,37 @@ function ProductDetails() {
   const product = products.filter((item) => `/${item.id}` === pathname);
 
   return (
-    <>
+    <div style={{ backgroundColor: '#d0f89b', minHeight: '100vh' }}>
       <Link to="/">
-        <div className="back-arrow-icon">
+        <div className="p-3 fs-1 p-fixed ">
           <FontAwesomeIcon icon={faCircleArrowLeft} />
         </div>
       </Link>
-      <div className="product-details">
-        <div className="image-container">
+
+      <div className="striped">
+        <div className="d-flex justify-content-center mb-5">
           <img src={product[0].image} alt="" />
         </div>
-        <div className="name-container">
-          <span>Name:</span>
-          <span>{product[0].name}</span>
-        </div>
-        <div className="type-container">
-          <span>Type:</span>
-          <span>{product[0].type}</span>
-        </div>
-        <div className="brand-container">
-          <span>Brand:</span>
-          <span>{product[0].brand}</span>
-        </div>
-        <div className="description-container">
-          <span>Description:</span>
-          <span>{product[0].description}</span>
-        </div>
-        <div className="price-container">
-          <span>Price:</span>
+        <div className="d-flex justify-content-center mb-3 fs-1 text-danger">
           <span>
             {product[0].currency}
             {product[0].price}
           </span>
         </div>
+        <div className="d-flex justify-content-center mb-3">
+          <h1>{product[0].name}</h1>
+        </div>
+        <div className="d-flex justify-content-center mb-3 opacity-50">
+          <h3>{product[0].type}</h3>
+        </div>
+        <div className="d-flex justify-content-center mb-3 text-danger">
+          <h4>{product[0].brand.toUpperCase()}</h4>
+        </div>
+        <div className="d-flex justify-content-center align-items-center mb-3 px-4 fw-bold">
+          <span className="opacity-75">{product[0].description}</span>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
