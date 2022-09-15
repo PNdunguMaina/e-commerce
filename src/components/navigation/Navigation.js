@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Navbar, Container, Form, Button } from 'react-bootstrap';
-
 import { fetchProducts } from '../../redux/products/productsSlice';
+import logo from '../../images/logo.png';
 
 const Navigation = () => {
   const [setProduct] = useState('');
@@ -18,16 +18,17 @@ const Navigation = () => {
   };
 
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="dark" variant="dark" sticky="top">
       <Container>
         <Navbar.Brand>
           <img
-            src="../../images/NYX.png"
+            src={logo}
             alt="NYX logo"
             width="30"
             height="30"
             className="d-inline-block align-top"
           />
+          NYX
         </Navbar.Brand>
 
         <Form className="d-flex">
