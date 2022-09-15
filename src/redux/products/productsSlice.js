@@ -39,6 +39,7 @@ export const fetchProducts = () => async (dispatch) => {
     currency: item.price_sign,
     image: item.image_link,
     description: item.description,
+    type: item.product_type,
   }));
   dispatch(addProducts(product));
 };
