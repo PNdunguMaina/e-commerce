@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="App"
+>
+  <nav
+    className="navbar navbar-expand navbar-dark bg-dark sticky-top"
+  >
+    <div
+      className="container"
+    >
+      <span
+        className="navbar-brand"
+      >
+        <img
+          alt="NYX logo"
+          className="d-inline-block align-top"
+          height="30"
+          src="logo.png"
+          width="30"
+        />
+        NYX
+      </span>
+      <form
+        className="d-flex"
+      >
+        <input
+          aria-label="Search"
+          className="me-2 form-control"
+          onClick={[Function]}
+          placeholder="Search..."
+          type="search"
+        />
+        <button
+          className="btn btn-outline-success"
+          disabled={false}
+          onClick={[Function]}
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+  </nav>
+  <div>
+    <div
+      className="products-container container"
+    />
+    <div
+      className="products-container container"
+    />
+  </div>
+</div>
+`;
