@@ -12,7 +12,7 @@ function ProductDetails() {
   return (
     <div style={{ backgroundColor: '#d0f89b', minHeight: '100vh' }}>
       <Link to="/">
-        <div className="p-3 fs-1 p-fixed ">
+        <div className="p-3 fs-1">
           <FontAwesomeIcon icon={faCircleArrowLeft} />
         </div>
       </Link>

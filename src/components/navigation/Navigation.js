@@ -2,18 +2,18 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Navbar, Container, Form, Button } from 'react-bootstrap';
-import { fetchProducts } from '../../redux/products/productsSlice';
+import { searchProducts } from '../../redux/products/productsSlice';
 import logo from '../../images/logo.png';
 
 const Navigation = () => {
   const [setProduct] = useState('');
   const dispatch = useDispatch();
   const onChangeHandler = (e) => {
-    dispatch(fetchProducts(e.target.value));
+    dispatch(searchProducts(e.target.value));
   };
 
   const onClickHandler = () => {
-    dispatch(fetchProducts(''));
+    dispatch(searchProducts(''));
     setProduct('');
   };
 

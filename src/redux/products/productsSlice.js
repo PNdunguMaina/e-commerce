@@ -1,9 +1,12 @@
+/* eslint-disable no-case-declarations */
 // Actions
 const ADD_PRODUCTS = 'e-commerce/src/redux/products/ADD_PRODUCTS';
+const SEARCH_PRODUCTS = 'e-commerce/src/redux/products/SEARCH_PRODUCTS';
 
 // initialize state
 const initialState = {
   products: [],
+  searched: [],
 };
 
 // reducer
@@ -15,6 +18,13 @@ export default (state = initialState, action) => {
         ...state,
         products: [...state.products, ...payload],
       };
+    case SEARCH_PRODUCTS:
+      // eslint-disable-next-line max-len
+      const searchedProducts = state.products.filter((item) => item.name.toLowerCase().includes(payload.toLowerCase()));
+      return {
+        ...state,
+        searched: payload === '' ? [] : searchedProducts,
+      };
     default:
       return state;
   }
@@ -24,6 +34,11 @@ export default (state = initialState, action) => {
 export const addProducts = (products) => ({
   type: ADD_PRODUCTS,
   payload: products,
+});
+
+export const searchProducts = (item) => ({
+  type: SEARCH_PRODUCTS,
+  payload: item,
 });
 
 export const fetchProducts = () => async (dispatch) => {
