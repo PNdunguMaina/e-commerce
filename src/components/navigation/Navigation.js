@@ -1,20 +1,14 @@
-/* eslint-disable object-curly-newline */
-import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Navbar, Container, Form, Button } from 'react-bootstrap';
+import {
+  Navbar, Container, Form,
+} from 'react-bootstrap';
 import { searchProducts } from '../../redux/products/productsSlice';
 import logo from '../../images/logo.png';
 
 const Navigation = () => {
-  const [setProduct] = useState('');
   const dispatch = useDispatch();
   const onChangeHandler = (e) => {
     dispatch(searchProducts(e.target.value));
-  };
-
-  const onClickHandler = () => {
-    dispatch(searchProducts(''));
-    setProduct('');
   };
 
   return (
@@ -37,15 +31,8 @@ const Navigation = () => {
             placeholder="Search..."
             className="me-2"
             aria-label="Search"
-            onClick={onChangeHandler}
+            onChange={onChangeHandler}
           />
-          <Button
-            type="submit"
-            variant="outline-success"
-            onClick={onClickHandler}
-          >
-            Search
-          </Button>
         </Form>
       </Container>
     </Navbar>
