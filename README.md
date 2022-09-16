@@ -11,6 +11,14 @@
 - **Frameworks:** React-Bootstrap, Bootstrap Javascript
 - **Technology used:** ESLint, Stylelint
 
+## Video
+
+Click [here](https://drive.google.com/file/d/1h8tK_Rw5Yv-C23UbXwmLn8eQsyGPAcYA/view?usp=sharing) to watch a video demonstrating the app's main features.
+
+## Live Demo
+
+Click [here](https://startling-gingersnap-be8f97.netlify.app/) to see a live demo of the app.
+
 ## Getting Started
 
 ### Prerequisites
